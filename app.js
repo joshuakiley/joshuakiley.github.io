@@ -26,11 +26,49 @@ $(() => {
   // };
   // $.ajax({
   //   type: "GET",
-  //   url: "/hanyu-shuiping-kaoshi/json/hsk-level-1.json",
+  //   url: "/json/hsk-level-1.json",
   //   data: "data"
   // }).then(getPinYin);
-  // modal pops up giving directions
   // modal pops up asking how many cards to study
+  const fullArray = [];
+  const currentStudyArray = [];
+  let studyCardQuantity = 0;
+
+  const getStudyList = data => {
+    for (let i = 0; i < data.length; i++) {
+      fullArray.push(data[i]);
+    }
+    for (let i = 0; i <= studyCardQuantity; i++) {
+      const randomCard = Math.round(Math.random() * (fullArray.length - 1));
+      if (currentStudyArray.includes(fullArray[randomCard])) {
+        console.log("hi");
+      } else {
+        currentStudyArray.push(fullArray[randomCard]);
+      }
+    }
+  };
+
+  $(`.initiation-modal`).on("submit", () => {
+    studyCardQuantity = $("#quantity").val();
+    $.ajax({
+      type: "GET",
+      url: "/json/hsk-level-1.json",
+      data: "data"
+    }).then(getStudyList);
+    $(".initiation-modal ").css("display", "none");
+    $(".how-to-modal").css("display", "block");
+    $;
+  });
+
+  $(".close").on("click", () => {
+    $(".how-to-modal").css("display", "none");
+  });
+
+  $("#how-to").on("click", () => {
+    $(".how-to-modal").css("display", "block");
+  });
+
+  // modal pops up giving directions
   // set variable equal to number of cards
   // ask which language to show English or Chinese
   // select first card randomly and display in selected language

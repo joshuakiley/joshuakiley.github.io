@@ -8,23 +8,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- How To Button -->
     <div class="how-to">
         <div class="btn btn-primary english" id="how-to">HOW TO</div>
     </div>
 
+    <!-- Modal Initiate study, ask how many cards -->
+    <div id="initiation-modal" class="initiation-modal">
+        <div class="modal-content">
+            <form id="initiattion-form">
+                <p class="english modal-text">How many cards would you like to study today?</p>
+                <input type="number" id="quantity" class="english title-query" placeholder="10"/>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal choose shown language -->
+    <div id="language-modal" class="language-modal">
+        <div class="modal-content">
+            <form id="initiation-form">
+                <p class="english modal-text">How many cards would you like to study today?</p>
+                <input type="number" id="quantity" class="english title-query" placeholder="10"/>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Initiate study, ask how many cards -->
+    <div id="how-to-modal-container" class="how-to-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <p class="modal-text">Here's how you do it...</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Buttons to decide if you need to study a card again or not -->
     <div class="decisions">
         <div class="btn btn-primary english" id="again">AGAIN</div>
         <div class="btn btn-primary english" id="retire">RETIRE</div>
     </div>
 
+    <!-- study flashcard with Chinese, English, Audio, and Phonetics -->
     <div class="card-container">
-      <div class="study-text chinese">梁段酸暖</div>
+      <div class="study-text chinese"></div>
       <div class="answer-section">
-        <a href="#" class="snd btn-primary phonetics english" id="pronunciation">liáng duàn suān nuǎn</div></a>
-        <div class="answer-text english">love</div>
+        <a href="#" class="snd btn-primary phonetics english" id="pronunciation">pinyin & audio</div></a>
+        <div class="answer-text english"></div>
       </div>
     </div>
 
+    <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
     <div class="deck-container">
         <div class="deck-again english snd btn-primary" id="shuffle">STUDY AGAIN</div>
         <div class="deck-retire english">RETIRED</div>
