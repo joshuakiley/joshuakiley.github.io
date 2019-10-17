@@ -1,5 +1,6 @@
 $(() => {
 
+<<<<<<< HEAD
     const getAudio = (data) => {
         $('.study-card').children('button').remove()
         const $pronincuationButton = $('<button>').attr('class', 'pronunciaion').attr('href', `${data.items[0].pathmp3}`).text(`${data.items[0].word}`);
@@ -22,10 +23,15 @@ $(() => {
         console.log(data[0].hanzi)
         console.log(data[0].pinyin)
         console.log(data[0].translations[0])
+=======
+    const handleData = (data) => {
+        console.log(data);
+>>>>>>> parent of 93fe6b3... Connect API for pronunciation and API for pinyin
     }
 
     $.ajax({
         type: "GET",
+<<<<<<< HEAD
         url: "/hanyu-shuiping-kaoshi/json/hsk-level-1.json",
         data: "data",
     }).then(getPinYin);
@@ -44,3 +50,8 @@ $(() => {
         // go through process again with only cards in unknown deck
 
 })
+=======
+        url: "https://apifree.forvo.com/action/standard-pronunciation/format/json/word/love/key/50cc8c901d98b50a741856ded1071131",
+    }).then(handleData);
+})
+>>>>>>> parent of 93fe6b3... Connect API for pronunciation and API for pinyin
