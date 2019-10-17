@@ -27,11 +27,11 @@ $(() => {
     console.log(data[0].translations[0]);
   };
 
-  $.ajax({
-    type: "GET",
-    url: "/hanyu-shuiping-kaoshi/json/hsk-level-1.json",
-    data: "data"
-  }).then(getPinYin);
+  // $.ajax({
+  //   type: "GET",
+  //   url: "/hanyu-shuiping-kaoshi/json/hsk-level-1.json",
+  //   data: "data"
+  // }).then(getPinYin);
 
   // modal pops up giving directions
   // modal pops up asking how many cards to study

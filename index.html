@@ -1,55 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="bundle.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HSK Flashcard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Hello World
+    <div class="deck-container">
+      <div class="deck english">STUDY AGAIN</div>
+      <div class="deck english">RETIRED</div>
+    </div>
+
+    <div class="card-container">
+      <div class="study-text chinese">我很好阿</div>
+      <div class="answer-section">
+        <a href="#" class="phonetics english">ai</div></a>
+        <div class="answer-text english">love</div>
+      </div>
+    </div>
+
+    <div class="decisions">
+        <div class="btn btn-primary english">AGAIN</div>
+        <div class="btn btn-primary english">RETIRE</div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/app.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HSK Flashcard</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <div class="modal">
-        <div class="modal-textbox">
-            <a id="close-modal" href="#">Begin</a>
-            <h1>Learn to Play</h1>
-            <p>Select how many </p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="unknown" id="unkown">
-            <div class="side-card"></div>
-        </div>
-        <div class="known" id="known">
-            <div class="side-card"></div>
-        </div>
-    </div>
-    <div class="study" id="study">
-            <div class="study-card">
-                <p class="chinese">安居乐业</p>
-                <button >Answer</button>
-            </div>
-            <div class="answer-card">
-                <button >← again</button>
-                <button class="pronunciaion">&#128266</button>
-                <button >good →</button>
-                <p class="definition">love</p>
-            </div>
-    </div>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-    </script>
-    <script src="/js/app.js"></script>
-</body>
-</html> -->
