@@ -41,23 +41,26 @@ $(() => {
     for (let i = 0; i <= studyCardQuantity; i++) {
       const randomCard = Math.round(Math.random() * (fullArray.length - 1));
       if (currentStudyArray.includes(fullArray[randomCard])) {
-        console.log("hi");
       } else {
         currentStudyArray.push(fullArray[randomCard]);
       }
     }
   };
 
-  $(`.initiation-modal`).on("submit", () => {
+  $(`#initiation-modal`).on("submit", () => {
     studyCardQuantity = $("#quantity").val();
     $.ajax({
       type: "GET",
       url: "/json/hsk-level-1.json",
       data: "data"
     }).then(getStudyList);
-    $(".initiation-modal ").css("display", "none");
-    $(".how-to-modal").css("display", "block");
+    $("#initiation-modal ").css("display", "none");
+    $("#language-modal").css("display", "block");
     $;
+  });
+
+  $("#language-modal").on("submit", () => {
+    //write code to set language on front of card
   });
 
   $(".close").on("click", () => {
