@@ -10,58 +10,93 @@
   <body>
     <!-- How To Button -->
     <div class="how-to">
-        <div class="btn btn-primary english" id="how-to">HOW TO</div>
+      <div class="btn btn-primary english" id="how-to">HOW TO</div>
     </div>
 
     <!-- Modal Initiate study, ask how many cards -->
     <div id="initiation-modal" class="modal">
-        <div class="modal-content">
-            <form id="initiattion-form">
-                <p class="english modal-text">How many cards would you like to study today?</p>
-                <input type="number" id="quantity" class="english title-query" placeholder="10"/>
-            </form>
-        </div>
+      <div class="modal-content">
+        <form id="initiattion-form" autocomplete="off">
+          <p class="english modal-text">
+            How many cards would you like to study today?
+          </p>
+          <input
+            type="number"
+            id="quantity"
+            class="english title-query"
+            value="10"
+          />
+        </form>
+      </div>
     </div>
 
     <!-- Modal choose shown language -->
     <div id="language-modal" class="modal">
-        <div class="modal-content">
-            <form id="initiation-form">
-                <p class="english modal-text">Which language would you like to see on the front of the card?</p>
-                <input type="text" id="quantity" class="english title-query" placeholder="Chinese/English"/>
-            </form>
-        </div>
+      <div class="modal-content">
+        <form id="initiation-form" autocomplete="off">
+          <p class="english modal-text">
+            Which language would you like to see on the front of the card?
+          </p>
+          <input
+            type="text"
+            id="language"
+            class="english title-query"
+            value="Chinese"
+            placeholder="Chinese/English"
+          />
+        </form>
+      </div>
     </div>
 
     <!-- Modal Initiate study, ask how many cards -->
     <div id="how-to-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <form>
-                <p class="modal-text">Here's how you do it...</p>
-            </form>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+          <p class="modal-text">
+            Look at the word, make a guess and try to say it.<br /><br />When
+            you think you know it, click on the "show answer" button to see the
+            answer and hear the pronunciation<br /><br />If you had trouble with
+            it, click the "AGAIN" button to add it to the deck of cards that
+            you'll study again.<br /><br />If you think you got it, then click
+            the "RETIRE" button to retire the card for the session.<br /><br />When
+            all of the cards are gone, click the "STUDY AGAIN" button to study
+            the cards you had trouble with.<br /><br />Continue this process
+            untilall of the cards have been retired for this session.
+          </p>
+        </form>
+      </div>
     </div>
 
     <!-- Buttons to decide if you need to study a card again or not -->
     <div class="decisions">
-        <div class="btn btn-primary english" id="again">AGAIN</div>
-        <div class="btn btn-primary english" id="retire">RETIRE</div>
+      <div class="btn btn-primary english" id="again">AGAIN</div>
+      <div class="btn btn-primary english" id="retire">RETIRE</div>
     </div>
 
     <!-- study flashcard with Chinese, English, Audio, and Phonetics -->
     <div class="card-container">
-      <div class="study-text chinese"></div>
+      <div class="study-text" id="front"></div>
       <div class="answer-section">
-        <a href="#" class="snd btn-primary phonetics english" id="pronunciation">pinyin & audio</div></a>
-        <div class="answer-text english"></div>
+        <div
+          onclick="document.getElementById('audio').play()"
+          class="snd btn-primary phonetics english"
+          id="pronunciation"
+        >
+          show answer
+        </div>
+        <div class="answer-text"><p id="back"></p></div>
       </div>
     </div>
 
+    <audio id="audio" src=""></audio>
+
     <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
     <div class="deck-container">
-        <div class="deck-again english snd btn-primary" id="shuffle">STUDY AGAIN</div>
-        <div class="deck-retire english">RETIRED</div>
+      <div class="deck-again english snd btn-primary" id="shuffle">
+        STUDY AGAIN
+      </div>
+      <div class="deck-retire english">RETIRED</div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

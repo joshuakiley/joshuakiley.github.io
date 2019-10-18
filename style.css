@@ -24,7 +24,7 @@ a:visited {
   color: rgb(75, 75, 75);
 }
 
-a: hover {
+a:hover {
   color: rgb(75, 75, 75);
 }
 
@@ -44,7 +44,6 @@ a: hover {
   text-align: center;
   padding-top: 45px;
   font-size: 24px;
-  border: 1px solid rgb(75, 75, 75);
 }
 
 .deck-retire {
@@ -56,7 +55,6 @@ a: hover {
   text-align: center;
   padding-top: 45px;
   font-size: 24px;
-  border: 1px solid rgb(225, 225, 225);
 }
 
 .card-container,
@@ -77,7 +75,6 @@ a: hover {
 }
 
 .study-text {
-  border: 1px solid black;
   text-align: center;
   font-size: 72px;
   height: 120px;
@@ -93,9 +90,12 @@ a: hover {
 
 .phonetics,
 .answer-text {
-  border: 1px solid black;
   text-align: center;
   padding: 0 2px;
+}
+
+.answer-text > p {
+  text-align: center;
 }
 
 .phonetics {
@@ -103,6 +103,8 @@ a: hover {
 }
 
 .answer-text {
+  display: none;
+  text-align: center;
   font-size: 24px;
   margin-top: 4px;
   text-align: left;
@@ -124,7 +126,6 @@ a: hover {
 
 .btn.btn-primary {
   transition: 0.2s;
-  border: 1px solid rgb(75, 75, 75);
   border-radius: 10px;
   color: rgb(225, 225, 225);
   background-color: rgb(75, 75, 75);
@@ -154,7 +155,6 @@ a: hover {
 
 .snd.btn-primary {
   transition: 0.2s;
-  border: 1px solid rgb(75, 75, 75);
   border-radius: 10px;
   color: rgb(225, 225, 225);
   background-color: rgb(75, 75, 75);
@@ -202,12 +202,15 @@ a: hover {
   display: none;
 }
 
+form > .modal-text {
+  text-align: left;
+}
+
 .modal-content {
   border-radius: 20px;
   background-color: rgb(225, 225, 225);
   margin: 10% auto;
   padding: 20px;
-  border: 1px solid rgb(75, 75, 75);
   max-width: 700px;
 }
 

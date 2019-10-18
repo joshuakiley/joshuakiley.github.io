@@ -1,74 +1,139 @@
 $(() => {
-  // const getAudio = data => {
-  //   $(".study-card")
-  //     .children("button")
-  //     .remove();
-  //   const $pronincuationButton = $("<button>")
-  //     .attr("class", "pronunciaion")
-  //     .attr("href", `${data.items[0].pathmp3}`)
-  //     .text(`${data.items[0].word}`);
-  //   $(".study-card").append($pronincuationButton);
-  // };
-  // $(".pronunciaion").on("click", () => {
-  //   $.ajax({
-  //     // type: "GET",
-  //     url:
-  //       "https://apifree.forvo.com/key/50cc8c901d98b50a741856ded1071131/format/json/action/standard-pronunciation/word/cat",
-  //     data: "data",
-  //     dataType: "jsonp"
-  //   }).then(getAudio);
-  // });
-  // const getPinYin = data => {
-  //   console.log(data[0]);
-  //   console.log(data[0].hanzi);
-  //   console.log(data[0].pinyin);
-  //   console.log(data[0].translations[0]);
-  // };
-  // $.ajax({
-  //   type: "GET",
-  //   url: "/json/hsk-level-1.json",
-  //   data: "data"
-  // }).then(getPinYin);
-  // modal pops up asking how many cards to study
+  /*************************************************************/
+  //INITIATION
+  // array of all of the vocabulary in the selected HSK level (level 1 through level 6)
   const fullArray = [];
+
+  // array of cards to be studied this session based on the number of cards the user wants to study
   const currentStudyArray = [];
+
+  // user input number of cards want to study this session
   let studyCardQuantity = 0;
 
+  // card front will either be Chinese or English based on user input
+  let cardFront = "";
+
+  // card back will be either Chinese or English base don user input
+  let cardBack = "";
+
+  //current card in the currentStudyArray that the student is studying
+  let cardCount = 0;
+  /*************************************************************/
+  // FUNCTION
+  // Create Study List
   const getStudyList = data => {
+    // make an array of every vocabulary word in the selected HSK level
     for (let i = 0; i < data.length; i++) {
       fullArray.push(data[i]);
     }
-    for (let i = 0; i <= studyCardQuantity; i++) {
+    // create an array of cards to study for current session based on user input
+    for (let i = 0; i < studyCardQuantity; i++) {
+      // random number used to access random index in the array of all the vocab for selected HSK level
       const randomCard = Math.round(Math.random() * (fullArray.length - 1));
+      // checks for redundancy in this sessions card deck
       if (currentStudyArray.includes(fullArray[randomCard])) {
+        i--;
       } else {
+        // places non-redundant cards in this session's study deck
         currentStudyArray.push(fullArray[randomCard]);
       }
     }
   };
+  // FUNCTION
+  // get audio mp3 from forvo.com API and place it in phonetic's button
+  const getAudio = data => {
+    for (let i = 0; i < data.items.length; i++) {
+      if (data.items[i].langname === "Mandarin Chinese") {
+        $("#audio").attr("src", data.items[i].pathmp3);
+        console.log(data.items[i]);
+      }
+    }
+  };
 
-  $(`#initiation-modal`).on("submit", () => {
-    studyCardQuantity = $("#quantity").val();
-    $.ajax({
-      type: "GET",
-      url: "/json/hsk-level-1.json",
-      data: "data"
-    }).then(getStudyList);
-    $("#initiation-modal ").css("display", "none");
-    $("#language-modal").css("display", "block");
-    $;
+  /*************************************************************/
+  // EVENT
+  // initiate session
+  $(`#initiation-modal`).on("submit", e => {
+    e.preventDefault();
+    // ensures a value greater than 0 is entered before progressing
+    if ($("#quantity").val() > 0) {
+      // set the number of cards to study this session based on user input
+      studyCardQuantity = $("#quantity").val();
+      // access local json file with HSK vocab lists based on level user chooses to study from
+      $.ajax({
+        type: "GET",
+        url: "/json/hsk-level-1.json",
+        data: "data"
+      }).then(getStudyList);
+      // switch from the card count modal to the language selection modal
+      $("#initiation-modal ").css("display", "none");
+      $("#language-modal").css("display", "block");
+    }
   });
 
-  $("#language-modal").on("submit", () => {
-    //write code to set language on front of card
+  // EVENT
+  // after the user inputs a language option set up the deck to display the chosen language on the front of the card
+  $("#language-modal").on("submit", e => {
+    e.preventDefault();
+    if (
+      $("#language")
+        .val()
+        .toUpperCase() === "ENGLISH" ||
+      $("#language")
+        .val()
+        .toUpperCase() === "CHINESE"
+    ) {
+      if (
+        $("#language")
+          .val()
+          .toUpperCase() === "ENGLISH"
+      ) {
+        // get front and back of card from local json filesand set correct font type
+        cardFront = "translations";
+        cardBack = "hanzi";
+        $("#front").addClass("english");
+        $("#back").addClass("chinese");
+        $("#front").text(currentStudyArray[cardCount][cardFront][0]);
+        $("#back").text(currentStudyArray[cardCount][cardBack]);
+      } else {
+        cardFront = "hanzi";
+        cardBack = "translations";
+        $("#front").addClass("chinese");
+        $("#back").addClass("english");
+        $("#front").text(currentStudyArray[cardCount][cardFront]);
+        $("#back").text(currentStudyArray[cardCount][cardBack][0]);
+      }
+      // hide the language selection modal
+      $("#language-modal").css("display", "none");
+      // set the pronunciation audio for the first card from Forvo's API
+      $.ajax({
+        type: "GET",
+        url: `https://apifree.forvo.com/key/50cc8c901d98b50a741856ded1071131/format/json/action/standard-pronunciation/word/${
+          currentStudyArray[cardCount]["hanzi"]
+        }`,
+        data: "data",
+        dataType: "jsonp"
+      }).then(getAudio);
+    }
   });
 
+  //EVENT
+  // when user clicks "show answer" button, show card back and play pronunciation audio
+  $("#pronunciation").on("click", e => {
+    $("#pronunciation").text(currentStudyArray[cardCount]["pinyin"]);
+    $(".answer-text").css("display", "block");
+  });
+
+  $("#again").on("click", e => {});
+
+  //EVENT
+  // hide/show how-to modal
   $(".close").on("click", () => {
-    $(".how-to-modal").css("display", "none");
+    $("#how-to-modal").css("display", "none");
   });
 
   $("#how-to").on("click", () => {
-    $(".how-to-modal").css("display", "block");
+    $("#how-to-modal").css("display", "block");
   });
 
   // modal pops up giving directions
