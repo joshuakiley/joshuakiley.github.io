@@ -7,6 +7,12 @@ $(() => {
   // array of cards to be studied this session based on the number of cards the user wants to study
   const currentStudyArray = [];
 
+  // array of cards to study again
+  const studyAgain = [];
+
+  //array of cards retired for this session
+  const retired = [];
+
   // user input number of cards want to study this session
   let studyCardQuantity = 0;
 
@@ -16,8 +22,6 @@ $(() => {
   // card back will be either Chinese or English base don user input
   let cardBack = "";
 
-  //current card in the currentStudyArray that the student is studying
-  let cardCount = 0;
   /*************************************************************/
   // FUNCTION
   // Create Study List
@@ -45,9 +49,34 @@ $(() => {
     for (let i = 0; i < data.items.length; i++) {
       if (data.items[i].langname === "Mandarin Chinese") {
         $("#audio").attr("src", data.items[i].pathmp3);
-        console.log(data.items[i]);
       }
     }
+  };
+
+  // FUCNTION
+  // change card to a new word
+  const cardSwitch = () => {
+    if (
+      $("#language")
+        .val()
+        .toUpperCase() === "ENGLISH"
+    ) {
+      // get front and back of card from local json filesand set correct font type
+      $("#front").text(currentStudyArray[0][cardFront][0]);
+      $("#back").text(currentStudyArray[0][cardBack]);
+    } else {
+      $("#front").text(currentStudyArray[0][cardFront]);
+      $("#back").text(currentStudyArray[0][cardBack][0]);
+    }
+    // set the pronunciation audio for the first card from Forvo's API
+    $.ajax({
+      type: "GET",
+      url: `https://apifree.forvo.com/action/word-pronunciations/format/json/word/${
+        currentStudyArray[0]["hanzi"]
+      }/order/rate-desc/key/50cc8c901d98b50a741856ded1071131/`,
+      data: "data",
+      dataType: "jsonp"
+    }).then(getAudio);
   };
 
   /*************************************************************/
@@ -93,38 +122,33 @@ $(() => {
         cardBack = "hanzi";
         $("#front").addClass("english");
         $("#back").addClass("chinese");
-        $("#front").text(currentStudyArray[cardCount][cardFront][0]);
-        $("#back").text(currentStudyArray[cardCount][cardBack]);
       } else {
         cardFront = "hanzi";
         cardBack = "translations";
         $("#front").addClass("chinese");
         $("#back").addClass("english");
-        $("#front").text(currentStudyArray[cardCount][cardFront]);
-        $("#back").text(currentStudyArray[cardCount][cardBack][0]);
       }
       // hide the language selection modal
       $("#language-modal").css("display", "none");
       // set the pronunciation audio for the first card from Forvo's API
-      $.ajax({
-        type: "GET",
-        url: `https://apifree.forvo.com/key/50cc8c901d98b50a741856ded1071131/format/json/action/standard-pronunciation/word/${
-          currentStudyArray[cardCount]["hanzi"]
-        }`,
-        data: "data",
-        dataType: "jsonp"
-      }).then(getAudio);
+      cardSwitch();
     }
   });
 
   //EVENT
   // when user clicks "show answer" button, show card back and play pronunciation audio
   $("#pronunciation").on("click", e => {
-    $("#pronunciation").text(currentStudyArray[cardCount]["pinyin"]);
+    console.log($("#audio").attr("src"));
+    $("#pronunciation").text(currentStudyArray[0]["pinyin"]);
     $(".answer-text").css("display", "block");
   });
 
-  $("#again").on("click", e => {});
+  $("#again").on("click", e => {
+    retired.push(currentStudyArray.shift());
+    $("#pronunciation").text("show answer");
+    $(".answer-text").css("display", "none");
+    cardSwitch();
+  });
 
   //EVENT
   // hide/show how-to modal
