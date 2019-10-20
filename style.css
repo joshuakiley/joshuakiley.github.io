@@ -8,15 +8,6 @@ p {
   text-align: left;
 }
 
-/* .show {
-  position: absolute;
-  bottom: 0;
-} */
-
-.card {
-  height: 95vh;
-}
-
 .card-title {
   font-size: 64px !important;
 }
@@ -31,9 +22,4 @@ p {
 
 .card {
   text-align: center;
-}
-
-.large {
-  position: absolute;
-  bottom: 0;
 }
