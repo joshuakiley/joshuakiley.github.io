@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="style.css">
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/materialize/css/materialize.css"
+      media="screen,projection"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>HSK Flashcard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <!-- How To Button -->
@@ -70,32 +78,52 @@
     </div>
 
     <!-- Buttons to decide if you need to study a card again or not -->
-    <div class="btn btn-primary english" id="again">AGAIN</div>
+    <div class="btn" id="again">AGAIN</div>
     <div class="btn btn-primary english" id="retire">RETIRE</div>
     <div class="btn btn-primary english" id="how-to">HOW TO</div>
-    <div class="deck-retire english">RETIRED</div>
+    <div class="btn-large waves-effect waves waves-block">
+      retire card
+    </div>
 
     <!-- study fl ashcard with Chinese, English, Audio, and Phonetics -->
-    <div class="card">
-      <div class="card-content" id="front">
-        <span
+    <div class="card large">
+      <div class="card-content">
+        <h1
           onclick="document.getElementById('audio').play()"
           class="card-title grey-text text-darken-4 chinese"
-          id="pronunciation"
+          id="font"
         >
-        爱爱爱爱
+          爱爱爱爱
+        </h1>
+        <span
+          class="btn-large waves-effect activator waves-block waves english"
+        >
+          show answer
         </span>
-        <div class="btn-large waves-effect activator waves-block waves light english">show answer</div>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4 chinese">爱爱爱爱<i class="material-icons right">close</i> </span>
-        <p id="back">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem similique quasi ipsam voluptate alias deleniti eius, natus possimus atque molestias nihil vitae harum, ratione, quos quam fugit eos. Molestiae!</p>
+        <h1 class="card-title grey-text text-darken-4 chinese">
+          爱爱爱爱
+        </h1>
+        <span class="btn-large waves-effect waves-block waves"
+          ><i class="material-icons">play_arrow</i></span
+        >
+        <p class="flow-text">ai</p>
+        <p class="flow-text" id="back">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          quidem similique quasi ipsam voluptate alias deleniti eius, natus
+          possimus atque molestias nihil vitae harum, ratione, quos quam fugit
+          eos. Molestiae!
+        </p>
       </div>
     </div>
 
     <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
-    <div class="deck-again english snd btn-primary" id="shuffle">
-      STUDY AGAIN
+    <div
+      class="btn-large btn-block waves waves-block waves-effect"
+      id="shuffle"
+    >
+      return to deck
     </div>
 
     <audio id="audio" src=""></audio>
@@ -105,6 +133,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- <script src="/app.js"></script> -->
-    <script type="text/javascript" src="/materialize/js/materialize.js"></script>
+    <script
+      type="text/javascript"
+      src="/materialize/js/materialize.js"
+    ></script>
   </body>
 </html>

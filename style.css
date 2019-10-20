@@ -1,14 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC|Roboto&display=swap");
 
+p {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 64px !important;
+}
+
+.btn {
+  margin: 20px;
+}
+
 .chinese {
-  font-family: 'Noto Sans SC', sans-serif !important;
+  font-family: "Noto Sans SC", sans-serif !important;
 }
 
 .english {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .card {
-  height: 350px;
   text-align: center;
+}
+
+.large {
+  position: absolute;
+  bottom: 0;
 }
