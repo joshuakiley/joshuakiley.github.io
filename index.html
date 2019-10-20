@@ -78,9 +78,9 @@
     </div>
 
     <!-- Buttons to decide if you need to study a card again or not -->
-    <div class="btn" id="again">AGAIN</div>
+    <!-- <div class="btn" id="again">AGAIN</div>
     <div class="btn btn-primary english" id="retire">RETIRE</div>
-    <div class="btn btn-primary english" id="how-to">HOW TO</div>
+    <div class="btn btn-primary english" id="how-to">HOW TO</div> -->
     <div class="btn-large waves-effect waves waves-block">
       retire card
     </div>
@@ -88,11 +88,7 @@
     <!-- study fl ashcard with Chinese, English, Audio, and Phonetics -->
     <div class="card large">
       <div class="card-content">
-        <h1
-          onclick="document.getElementById('audio').play()"
-          class="card-title grey-text text-darken-4 chinese"
-          id="font"
-        >
+        <h1 class="card-title grey-text text-darken-4 chinese" id="frontTitle">
           爱爱爱爱
         </h1>
         <span
@@ -102,10 +98,12 @@
         </span>
       </div>
       <div class="card-reveal">
-        <h1 class="card-title grey-text text-darken-4 chinese">
+        <h1 class="card-title grey-text text-darken-4 chinese" id="backTitle">
           爱爱爱爱
         </h1>
-        <span class="btn-large waves-effect waves-block waves"
+        <span
+          class="btn-large waves-effect waves-block waves"
+          onclick="document.getElementById('audio').play()"
           ><i class="material-icons">play_arrow</i></span
         >
         <p class="flow-text">ai</p>
