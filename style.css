@@ -8,12 +8,17 @@ p {
   text-align: left;
 }
 
-.card-title {
-  font-size: 64px !important;
+/* .show {
+  position: absolute;
+  bottom: 0;
+} */
+
+.card {
+  height: 95vh;
 }
 
-.btn {
-  margin: 20px;
+.card-title {
+  font-size: 64px !important;
 }
 
 .chinese {

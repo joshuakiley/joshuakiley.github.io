@@ -81,23 +81,23 @@
     <!-- <div class="btn" id="again">AGAIN</div>
     <div class="btn btn-primary english" id="retire">RETIRE</div>
     <div class="btn btn-primary english" id="how-to">HOW TO</div> -->
-    <div class="btn-large waves-effect waves waves-block">
-      retire card
-    </div>
 
-    <!-- study fl ashcard with Chinese, English, Audio, and Phonetics -->
-    <div class="card large">
+    <div class="card">
       <div class="card-content">
+        <span class="btn" id="how">How To</span>
         <h1 class="card-title grey-text text-darken-4 chinese" id="frontTitle">
           爱爱爱爱
         </h1>
         <span
-          class="btn-large waves-effect activator waves-block waves english"
+          class="btn-large waves-effect activator waves-block waves english show"
         >
           show answer
         </span>
       </div>
       <div class="card-reveal">
+        <div class="btn-large waves-effect waves waves-block">
+          retire card
+        </div>
         <h1 class="card-title grey-text text-darken-4 chinese" id="backTitle">
           爱爱爱爱
         </h1>
@@ -113,15 +113,13 @@
           possimus atque molestias nihil vitae harum, ratione, quos quam fugit
           eos. Molestiae!
         </p>
+        <div
+          class="btn-large btn-block waves waves-block waves-effect"
+          id="shuffle"
+        >
+          return to deck
+        </div>
       </div>
-    </div>
-
-    <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
-    <div
-      class="btn-large btn-block waves waves-block waves-effect"
-      id="shuffle"
-    >
-      return to deck
     </div>
 
     <audio id="audio" src=""></audio>
