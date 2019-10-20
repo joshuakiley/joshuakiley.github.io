@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="style.css">
     <title>HSK Flashcard</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
     <!-- How To Button -->
-    <div class="how-to">
-      <div class="btn btn-primary english" id="how-to">HOW TO</div>
-    </div>
-
     <!-- Modal Initiate study, ask how many cards -->
     <div id="initiation-modal" class="modal">
       <div class="modal-content">
@@ -69,40 +70,41 @@
     </div>
 
     <!-- Buttons to decide if you need to study a card again or not -->
-    <div class="decisions">
-      <div class="btn btn-primary english" id="again">AGAIN</div>
-      <div class="btn btn-primary english" id="retire">RETIRE</div>
-    </div>
+    <div class="btn btn-primary english" id="again">AGAIN</div>
+    <div class="btn btn-primary english" id="retire">RETIRE</div>
+    <div class="btn btn-primary english" id="how-to">HOW TO</div>
+    <div class="deck-retire english">RETIRED</div>
 
-    <!-- study flashcard with Chinese, English, Audio, and Phonetics -->
-    <div class="card-container">
-      <div class="study-text" id="front"></div>
-      <div class="answer-section">
-        <div
+    <!-- study fl ashcard with Chinese, English, Audio, and Phonetics -->
+    <div class="card">
+      <div class="card-content" id="front">
+        <span
           onclick="document.getElementById('audio').play()"
-          class="snd btn-primary phonetics english"
+          class="card-title grey-text text-darken-4 chinese"
           id="pronunciation"
         >
-          show answer
-        </div>
-        <div class="answer-text"><p id="back"></p></div>
+        爱爱爱爱
+        </span>
+        <div class="btn-large waves-effect activator waves-block waves light english">show answer</div>
       </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4 chinese">爱爱爱爱<i class="material-icons right">close</i> </span>
+        <p id="back">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem similique quasi ipsam voluptate alias deleniti eius, natus possimus atque molestias nihil vitae harum, ratione, quos quam fugit eos. Molestiae!</p>
+      </div>
+    </div>
+
+    <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
+    <div class="deck-again english snd btn-primary" id="shuffle">
+      STUDY AGAIN
     </div>
 
     <audio id="audio" src=""></audio>
-
-    <!-- Placeholder for deck of cards you want to study again and deck of cards you don't need to study again -->
-    <div class="deck-container">
-      <div class="deck-again english snd btn-primary" id="shuffle">
-        STUDY AGAIN
-      </div>
-      <div class="deck-retire english">RETIRED</div>
-    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="/app.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <script type="text/javascript" src="/materialize/js/materialize.js"></script>
   </body>
 </html>
