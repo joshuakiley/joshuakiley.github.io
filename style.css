@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC|Roboto&display=swap");
 
-#frontTitle {
-  padding-bottom: 30px;
+body {
+  user-select: none;
+}
+
+.card {
+  height: 97vh !important;
 }
 
 p {
   text-align: left;
+}
+
+#frontTitle {
+  padding-bottom: 30px;
 }
 
 .card-title {
