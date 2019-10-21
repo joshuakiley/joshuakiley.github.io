@@ -93,8 +93,15 @@ $(() => {
     e.preventDefault();
     // ensures a value greater than 0 is entered before progressing
     if ($("#quantity").val() > 0) {
-      // set the number of cards to study this session based on user input
-      studyCardQuantity = $("#quantity").val();
+      // check that the quantity is fewer than the number of vocab words
+      if ($("#quantity").val() <= fullArray.length) {
+        // set the number of cards to study this session based on user input
+        studyCardQuantity = $("#quantity").val();
+      } else {
+        // default to number of vocab words
+        studyCardQuantity = fullArray.length;
+      }
+
       // switch from the card count modal to the language selection modal
       $("#initiation-modal").css("display", "none");
       $("#hsk-level").css("display", "block");
