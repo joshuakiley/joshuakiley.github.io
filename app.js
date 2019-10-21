@@ -93,8 +93,15 @@ $(() => {
 
   /*************************************************************/
   // EVENT
-  // initiate session
+  // show the directions to the user before getting input from the user
+  $("#howModal").on("submit", e => {
+    e.preventDefault();
+    $("#howModal").css("display", "none");
+    $("#initiation-modal").css("display", "block");
+  });
 
+  //EVENT
+  // initiate session
   $("#initiation-modal").on("submit", e => {
     e.preventDefault();
     // ensures a value greater than 0 is entered before progressing
