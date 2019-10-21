@@ -62,12 +62,15 @@ $(() => {
         .toUpperCase() === "ENGLISH"
     ) {
       // get front and back of card from local json filesand set correct font type
-      $("#front").text(currentStudyArray[0][cardFront][0]);
+      $("#frontTitle").text(currentStudyArray[0][cardFront][0]);
+      $("#backTitle").text(currentStudyArray[0][cardFront][0]);
       $("#back").text(currentStudyArray[0][cardBack]);
     } else {
-      $("#front").text(currentStudyArray[0][cardFront]);
-      $("#back").text(currentStudyArray[0][cardBack][0]);
+      $("#frontTitle").text(currentStudyArray[0][cardFront]);
+      $("#backTitle").text(currentStudyArray[0][cardFront]);
+      $("#back").text(currentStudyArray[0][cardBack]);
     }
+    $("#pinyin").text(currentStudyArray[0]["pinyin"]);
     // set the pronunciation audio for the first card from Forvo's API
     $.ajax({
       type: "GET",
@@ -82,7 +85,8 @@ $(() => {
   /*************************************************************/
   // EVENT
   // initiate session
-  $(`#initiation-modal`).on("submit", e => {
+
+  $("#initiation-modal").on("submit", e => {
     e.preventDefault();
     // ensures a value greater than 0 is entered before progressing
     if ($("#quantity").val() > 0) {
@@ -95,7 +99,7 @@ $(() => {
         data: "data"
       }).then(getStudyList);
       // switch from the card count modal to the language selection modal
-      $("#initiation-modal ").css("display", "none");
+      $("#initiation-modal").css("display", "none");
       $("#language-modal").css("display", "block");
     }
   });
@@ -120,12 +124,14 @@ $(() => {
         // get front and back of card from local json filesand set correct font type
         cardFront = "translations";
         cardBack = "hanzi";
-        $("#front").addClass("english");
+        $("#frontTitle").addClass("english");
+        $("#backTitle").addClass("english");
         $("#back").addClass("chinese");
       } else {
         cardFront = "hanzi";
         cardBack = "translations";
-        $("#front").addClass("chinese");
+        $("#frontTitle").addClass("chinese");
+        $("#backTitle").addClass("chinese");
         $("#back").addClass("english");
       }
       // hide the language selection modal
@@ -144,20 +150,17 @@ $(() => {
   });
 
   $("#again").on("click", e => {
-    retired.push(currentStudyArray.shift());
-    $("#pronunciation").text("show answer");
-    $(".answer-text").css("display", "none");
     cardSwitch();
   });
 
   //EVENT
   // hide/show how-to modal
   $(".close").on("click", () => {
-    $("#how-to-modal").css("display", "none");
+    $("#howModal").css("display", "none");
   });
 
-  $("#how-to").on("click", () => {
-    $("#how-to-modal").css("display", "block");
+  $("#howBtn").on("click", () => {
+    $("#howModal").css("display", "block");
   });
 
   // modal pops up giving directions

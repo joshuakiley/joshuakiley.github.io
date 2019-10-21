@@ -25,16 +25,24 @@
     <!-- Modal Initiate study, ask how many cards -->
     <div id="initiation-modal" class="modal">
       <div class="modal-content">
+        <h4>
+          How many cards would you like to study today?
+        </h4>
         <form id="initiattion-form" autocomplete="off">
-          <p class="english modal-text">
-            How many cards would you like to study today?
-          </p>
           <input
             type="number"
             id="quantity"
             class="english title-query"
             value="10"
           />
+          <button
+            class="btn right waves-effect waves-light english"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
         </form>
       </div>
     </div>
@@ -58,9 +66,9 @@
     </div>
 
     <!-- Modal Initiate study, ask how many cards -->
-    <div id="how-to-modal" class="modal">
+    <div id="howModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close material-icons right">close</span>
         <form>
           <p class="modal-text">
             Look at the word, make a guess and try to say it.<br /><br />When
@@ -77,36 +85,32 @@
       </div>
     </div>
 
-    <!-- Buttons to decide if you need to study a card again or not -->
-    <!-- <div class="btn" id="again">AGAIN</div>
-    <div class="btn btn-primary english" id="retire">RETIRE</div>
-    <div class="btn btn-primary english" id="how-to">HOW TO</div> -->
-
     <div class="card large">
       <div class="card-content">
-        <span class="btn" id="how">How To</span>
-        <h1 class="card-title grey-text text-darken-4 chinese" id="frontTitle">
-          爱爱爱爱
-        </h1>
+        <a
+          class="waves-effect waves-light english btn modal-trigger"
+          id="howBtn"
+          href="#howModal"
+          >How To</a
+        >
+        <h1 class="card-title grey-text text-darken-4" id="frontTitle"></h1>
         <span
-          class="btn-large waves-effect activator waves-block waves english show"
+          class="btn-large waves-effect activator waves-block waves-light english show"
         >
           show answer
         </span>
       </div>
       <div class="card-reveal">
-        <div class="btn-large waves-effect waves waves-block">
+        <div class="btn-large waves-effect waves-light waves-block">
           retire card
         </div>
-        <h1 class="card-title grey-text text-darken-4 chinese" id="backTitle">
-          爱爱爱爱<i class="material-icons right">close</i>
-        </h1>
+        <h1 class="card-title grey-text text-darken-4" id="backTitle"></h1>
         <span
-          class="btn-large waves-effect waves-block waves"
+          class="btn-large waves-effect waves-block waves-light"
           onclick="document.getElementById('audio').play()"
           ><i class="material-icons">play_arrow</i></span
         >
-        <p class="flow-text">ai</p>
+        <p class="flow-text" id="pinyin">ai</p>
         <p class="flow-text" id="back">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
           quidem similique quasi ipsam voluptate alias deleniti eius, natus
@@ -114,7 +118,7 @@
           eos. Molestiae!
         </p>
         <div
-          class="btn-large btn-block waves waves-block waves-effect"
+          class="btn-large btn-block waves-light waves-block waves-effect"
           id="shuffle"
         >
           return to deck
@@ -128,7 +132,7 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="/app.js"></script> -->
+    <script src="/app.js"></script>
     <script
       type="text/javascript"
       src="/materialize/js/materialize.js"

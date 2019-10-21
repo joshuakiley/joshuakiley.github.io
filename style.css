@@ -4,16 +4,23 @@ body {
   user-select: none;
 }
 
-.card {
-  height: 97vh !important;
-}
-
 p {
   text-align: left;
 }
 
 #frontTitle {
   padding-bottom: 30px;
+}
+
+#initiation-modal {
+  display: block;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  margin-top: 0px;
 }
 
 .card-title {
@@ -30,4 +37,5 @@ p {
 
 .card {
   text-align: center;
+  height: 97vh !important;
 }
