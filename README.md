@@ -3,8 +3,6 @@
 
 This app is designed to help people study for the HSK exam.
 
-It currently allows users to select the HSK level that they would like to study, and to select the number of vocabulary that they would like to study in any given session.
-
 ## Features
 - [x] Select an HSK level to study at the beginning of each session
 - [x] Select the number of flashcards to study at the beginning of each session
