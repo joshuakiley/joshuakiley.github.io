@@ -13,6 +13,10 @@ li {
   line-height: 30px;
 }
 
+footer > p {
+  text-align: center;
+}
+
 #frontTitle {
   padding-bottom: 30px;
 }
