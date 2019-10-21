@@ -3,43 +3,25 @@
     "id": 1,
     "hanzi": "爱",
     "pinyin": "ài",
-    "translations": [
-      "to love",
-      "affection",
-      "to be fond of",
-      "to like"
-    ]
+    "translations": ["to love", "affection", "to be fond of", "to like"]
   },
   {
     "id": 2,
     "hanzi": "八",
     "pinyin": "bā",
-    "translations": [
-      "eight",
-      "8"
-    ]
+    "translations": ["eight", "8"]
   },
   {
     "id": 3,
     "hanzi": "爸爸",
     "pinyin": "bà ba",
-    "translations": [
-      "(informal) father",
-      "CL:個|个",
-      "位[wèi]"
-    ]
+    "translations": ["(informal) father", "CL:個|个", "位[wèi]"]
   },
   {
     "id": 4,
     "hanzi": "杯子",
     "pinyin": "bēi zi",
-    "translations": [
-      "cup",
-      "glass",
-      "CL:個|个",
-      "支",
-      "枝[zhī]"
-    ]
+    "translations": ["cup", "glass", "CL:個|个", "支", "枝[zhī]"]
   },
   {
     "id": 5,
@@ -87,11 +69,7 @@
     "id": 8,
     "hanzi": "不",
     "pinyin": "bù",
-    "translations": [
-      "(negative prefix)",
-      "not",
-      "no"
-    ]
+    "translations": ["(negative prefix)", "not", "no"]
   },
   {
     "id": 9,
@@ -110,12 +88,7 @@
     "id": 10,
     "hanzi": "茶",
     "pinyin": "chá",
-    "translations": [
-      "tea",
-      "tea plant",
-      "CL:杯",
-      "壺|壶[hú]"
-    ]
+    "translations": ["tea", "tea plant", "CL:杯", "壺|壶[hú]"]
   },
   {
     "id": 11,
@@ -135,18 +108,13 @@
     "id": 12,
     "hanzi": "出租车",
     "pinyin": "chū zū chē",
-    "translations": [
-      "taxi",
-      "(Taiwan) rental car"
-    ]
+    "translations": ["taxi", "(Taiwan) rental car"]
   },
   {
     "id": 13,
     "hanzi": "打电话",
     "pinyin": "dǎ diàn huà",
-    "translations": [
-      "to make a telephone call"
-    ]
+    "translations": ["to make a telephone call"]
   },
   {
     "id": 14,
@@ -205,46 +173,25 @@
     "id": 17,
     "hanzi": "电脑",
     "pinyin": "diàn nǎo",
-    "translations": [
-      "computer",
-      "CL:臺|台[tái]"
-    ]
+    "translations": ["computer", "CL:臺|台[tái]"]
   },
   {
     "id": 18,
     "hanzi": "电视",
     "pinyin": "diàn shì",
-    "translations": [
-      "television",
-      "TV",
-      "CL:臺|台",
-      "個|个[gè]"
-    ]
+    "translations": ["television", "TV", "CL:臺|台", "個|个[gè]"]
   },
   {
     "id": 19,
     "hanzi": "电影",
     "pinyin": "diàn yǐng",
-    "translations": [
-      "movie",
-      "film",
-      "CL:部",
-      "片",
-      "幕",
-      "場|场[chǎng]"
-    ]
+    "translations": ["movie", "film", "CL:部", "片", "幕", "場|场[chǎng]"]
   },
   {
     "id": 20,
     "hanzi": "东西",
     "pinyin": "dōng xi",
-    "translations": [
-      "thing",
-      "stuff",
-      "person",
-      "CL:個|个",
-      "件[jiàn]"
-    ]
+    "translations": ["thing", "stuff", "person", "CL:個|个", "件[jiàn]"]
   },
   {
     "id": 21,
@@ -304,56 +251,37 @@
     "id": 25,
     "hanzi": "多少",
     "pinyin": "duō shao",
-    "translations": [
-      "how much",
-      "how many",
-      "which (number)",
-      "as much as"
-    ]
+    "translations": ["how much", "how many", "which (number)", "as much as"]
   },
   {
     "id": 26,
     "hanzi": "儿子",
     "pinyin": "ér zi",
-    "translations": [
-      "son"
-    ]
+    "translations": ["son"]
   },
   {
     "id": 27,
     "hanzi": "二",
     "pinyin": "èr",
-    "translations": [
-      "two",
-      "2",
-      "stupid (Beijing dialect)"
-    ]
+    "translations": ["two", "2", "stupid (Beijing dialect)"]
   },
   {
     "id": 28,
     "hanzi": "饭馆",
     "pinyin": "fàn guǎn",
-    "translations": [
-      "restaurant",
-      "CL:家[jiā]"
-    ]
+    "translations": ["restaurant", "CL:家[jiā]"]
   },
   {
     "id": 29,
     "hanzi": "飞机",
     "pinyin": "fēi jī",
-    "translations": [
-      "airplane",
-      "CL:架[jià]"
-    ]
+    "translations": ["airplane", "CL:架[jià]"]
   },
   {
     "id": 30,
     "hanzi": "分钟",
     "pinyin": "fēn zhōng",
-    "translations": [
-      "minute"
-    ]
+    "translations": ["minute"]
   },
   {
     "id": 31,
@@ -370,9 +298,7 @@
     "id": 32,
     "hanzi": "个",
     "pinyin": "gè",
-    "translations": [
-      "variant of 個|个[gè]"
-    ]
+    "translations": ["variant of 個|个[gè]"]
   },
   {
     "id": 33,
@@ -393,20 +319,13 @@
     "id": 34,
     "hanzi": "狗",
     "pinyin": "gǒu",
-    "translations": [
-      "dog",
-      "CL:隻|只",
-      "條|条[tiáo]"
-    ]
+    "translations": ["dog", "CL:隻|只", "條|条[tiáo]"]
   },
   {
     "id": 35,
     "hanzi": "汉语",
     "pinyin": "Hàn yǔ",
-    "translations": [
-      "Chinese language",
-      "CL:門|门[mén]"
-    ]
+    "translations": ["Chinese language", "CL:門|门[mén]"]
   },
   {
     "id": 36,
@@ -427,10 +346,7 @@
     "id": 37,
     "hanzi": "喝",
     "pinyin": "hē",
-    "translations": [
-      "to drink",
-      "My goodness!"
-    ]
+    "translations": ["to drink", "My goodness!"]
   },
   {
     "id": 38,
@@ -452,34 +368,19 @@
     "id": 39,
     "hanzi": "很",
     "pinyin": "hěn",
-    "translations": [
-      "(adverb of degree)",
-      "quite",
-      "very",
-      "awfully"
-    ]
+    "translations": ["(adverb of degree)", "quite", "very", "awfully"]
   },
   {
     "id": 40,
     "hanzi": "后面",
     "pinyin": "hòu mian",
-    "translations": [
-      "rear",
-      "back",
-      "behind",
-      "later",
-      "afterwards"
-    ]
+    "translations": ["rear", "back", "behind", "later", "afterwards"]
   },
   {
     "id": 41,
     "hanzi": "回",
     "pinyin": "huí",
-    "translations": [
-      "to curve",
-      "to return",
-      "to revolve"
-    ]
+    "translations": ["to curve", "to return", "to revolve"]
   },
   {
     "id": 42,
@@ -507,20 +408,13 @@
     "id": 43,
     "hanzi": "火车站",
     "pinyin": "huǒ chē zhàn",
-    "translations": [
-      "train station"
-    ]
+    "translations": ["train station"]
   },
   {
     "id": 44,
     "hanzi": "几",
     "pinyin": "jǐ",
-    "translations": [
-      "how much",
-      "how many",
-      "several",
-      "a few"
-    ]
+    "translations": ["how much", "how many", "several", "a few"]
   },
   {
     "id": 45,
@@ -555,20 +449,13 @@
     "id": 47,
     "hanzi": "今天",
     "pinyin": "jīn tiān",
-    "translations": [
-      "today",
-      "at the present",
-      "now"
-    ]
+    "translations": ["today", "at the present", "now"]
   },
   {
     "id": 48,
     "hanzi": "九",
     "pinyin": "jiǔ",
-    "translations": [
-      "nine",
-      "9"
-    ]
+    "translations": ["nine", "9"]
   },
   {
     "id": 49,
@@ -611,10 +498,7 @@
     "id": 51,
     "hanzi": "看见",
     "pinyin": "kàn jiàn",
-    "translations": [
-      "to see",
-      "to catch sight of"
-    ]
+    "translations": ["to see", "to catch sight of"]
   },
   {
     "id": 52,
@@ -647,11 +531,7 @@
     "id": 54,
     "hanzi": "老师",
     "pinyin": "lǎo shī",
-    "translations": [
-      "teacher",
-      "CL:個|个",
-      "位[wèi]"
-    ]
+    "translations": ["teacher", "CL:個|个", "位[wèi]"]
   },
   {
     "id": 55,
@@ -666,9 +546,7 @@
     "id": 56,
     "hanzi": "冷",
     "pinyin": "lěng",
-    "translations": [
-      "cold"
-    ]
+    "translations": ["cold"]
   },
   {
     "id": 57,
@@ -707,100 +585,67 @@
     "id": 59,
     "hanzi": "六",
     "pinyin": "liù",
-    "translations": [
-      "six",
-      "6"
-    ]
+    "translations": ["six", "6"]
   },
   {
     "id": 60,
     "hanzi": "妈妈",
     "pinyin": "mā ma",
-    "translations": [
-      "mama",
-      "mommy",
-      "mother",
-      "CL:個|个",
-      "位[wèi]"
-    ]
+    "translations": ["mama", "mommy", "mother", "CL:個|个", "位[wèi]"]
   },
   {
     "id": 61,
     "hanzi": "吗",
     "pinyin": "ma",
-    "translations": [
-      "(question tag)"
-    ]
+    "translations": ["(question tag)"]
   },
   {
     "id": 62,
     "hanzi": "买",
     "pinyin": "mǎi",
-    "translations": [
-      "to buy",
-      "to purchase"
-    ]
+    "translations": ["to buy", "to purchase"]
   },
   {
     "id": 63,
     "hanzi": "猫",
     "pinyin": "māo",
-    "translations": [
-      "cat",
-      "CL:隻|只[zhī]"
-    ]
+    "translations": ["cat", "CL:隻|只[zhī]"]
   },
   {
     "id": 64,
     "hanzi": "没",
     "pinyin": "méi",
-    "translations": [
-      "(negative prefix for verbs)",
-      "have not",
-      "not"
-    ]
+    "translations": ["(negative prefix for verbs)", "have not", "not"]
   },
   {
     "id": 65,
     "hanzi": "没关系",
     "pinyin": "méi guān xi",
-    "translations": [
-      "it doesn't matter"
-    ]
+    "translations": ["it doesn't matter"]
   },
   {
     "id": 66,
     "hanzi": "米饭",
     "pinyin": "mǐ fàn",
-    "translations": [
-      "(cooked) rice"
-    ]
+    "translations": ["(cooked) rice"]
   },
   {
     "id": 67,
     "hanzi": "明天",
     "pinyin": "míng tiān",
-    "translations": [
-      "tomorrow"
-    ]
+    "translations": ["tomorrow"]
   },
   {
     "id": 68,
     "hanzi": "名字",
     "pinyin": "míng zi",
-    "translations": [
-      "name (of a person or thing)",
-      "CL:個|个[gè]"
-    ]
+    "translations": ["name (of a person or thing)", "CL:個|个[gè]"]
   },
   {
     "id": 69,
     "hanzi": "哪",
     "pinyin": "nǎ",
-    "translations": [
-      "how",
-      "which"
-    ]
+    "translations": ["how", "which"]
   },
   {
     "id": 70,
@@ -848,65 +693,43 @@
     "id": 73,
     "hanzi": "你",
     "pinyin": "nǐ",
-    "translations": [
-      "you (informal",
-      "as opposed to courteous 您)"
-    ]
+    "translations": ["you (informal", "as opposed to courteous 您)"]
   },
   {
     "id": 74,
     "hanzi": "年",
     "pinyin": "nián",
-    "translations": [
-      "year",
-      "CL:個|个[gè]"
-    ]
+    "translations": ["year", "CL:個|个[gè]"]
   },
   {
     "id": 75,
     "hanzi": "女儿",
     "pinyin": "nǚ ér",
-    "translations": [
-      "daughter"
-    ]
+    "translations": ["daughter"]
   },
   {
     "id": 76,
     "hanzi": "朋友",
     "pinyin": "péng you",
-    "translations": [
-      "friend",
-      "CL:個|个",
-      "位[wèi]"
-    ]
+    "translations": ["friend", "CL:個|个", "位[wèi]"]
   },
   {
     "id": 77,
     "hanzi": "漂亮",
     "pinyin": "piào liang",
-    "translations": [
-      "pretty",
-      "beautiful"
-    ]
+    "translations": ["pretty", "beautiful"]
   },
   {
     "id": 78,
     "hanzi": "苹果",
     "pinyin": "píng guǒ",
-    "translations": [
-      "apple",
-      "CL:個|个",
-      "顆|颗[kē]"
-    ]
+    "translations": ["apple", "CL:個|个", "顆|颗[kē]"]
   },
   {
     "id": 79,
     "hanzi": "七",
     "pinyin": "qī",
-    "translations": [
-      "seven",
-      "7"
-    ]
+    "translations": ["seven", "7"]
   },
   {
     "id": 80,
@@ -924,12 +747,7 @@
     "id": 81,
     "hanzi": "前面",
     "pinyin": "qián miàn",
-    "translations": [
-      "ahead",
-      "in front",
-      "preceding",
-      "above"
-    ]
+    "translations": ["ahead", "in front", "preceding", "above"]
   },
   {
     "id": 82,
@@ -976,13 +794,7 @@
     "id": 85,
     "hanzi": "人",
     "pinyin": "rén",
-    "translations": [
-      "man",
-      "person",
-      "people",
-      "CL:個|个",
-      "位[wèi]"
-    ]
+    "translations": ["man", "person", "people", "CL:個|个", "位[wèi]"]
   },
   {
     "id": 86,
@@ -1015,21 +827,13 @@
     "id": 88,
     "hanzi": "三",
     "pinyin": "sān",
-    "translations": [
-      "three",
-      "3"
-    ]
+    "translations": ["three", "3"]
   },
   {
     "id": 89,
     "hanzi": "商店",
     "pinyin": "shāng diàn",
-    "translations": [
-      "store",
-      "shop",
-      "CL:家",
-      "個|个[gè]"
-    ]
+    "translations": ["store", "shop", "CL:家", "個|个[gè]"]
   },
   {
     "id": 90,
@@ -1052,72 +856,43 @@
     "id": 91,
     "hanzi": "上午",
     "pinyin": "shàng wǔ",
-    "translations": [
-      "morning",
-      "CL:個|个[gè]"
-    ]
+    "translations": ["morning", "CL:個|个[gè]"]
   },
   {
     "id": 92,
     "hanzi": "少",
     "pinyin": "shǎo",
-    "translations": [
-      "few",
-      "little",
-      "lack"
-    ]
+    "translations": ["few", "little", "lack"]
   },
   {
     "id": 93,
     "hanzi": "谁",
     "pinyin": "shéi",
-    "translations": [
-      "who",
-      "also pr. [shuí]"
-    ]
+    "translations": ["who", "also pr. [shuí]"]
   },
   {
     "id": 94,
     "hanzi": "什么",
     "pinyin": "shén me",
-    "translations": [
-      "what?",
-      "who?",
-      "something",
-      "anything"
-    ]
+    "translations": ["what?", "who?", "something", "anything"]
   },
   {
     "id": 95,
     "hanzi": "十",
     "pinyin": "shí",
-    "translations": [
-      "ten",
-      "10"
-    ]
+    "translations": ["ten", "10"]
   },
   {
     "id": 96,
     "hanzi": "时候",
     "pinyin": "shí hou",
-    "translations": [
-      "time",
-      "length of time",
-      "moment",
-      "period"
-    ]
+    "translations": ["time", "length of time", "moment", "period"]
   },
   {
     "id": 97,
     "hanzi": "是",
     "pinyin": "shì",
-    "translations": [
-      "is",
-      "are",
-      "am",
-      "yes",
-      "to be"
-    ]
+    "translations": ["is", "are", "am", "yes", "to be"]
   },
   {
     "id": 98,
@@ -1149,19 +924,13 @@
     "id": 100,
     "hanzi": "水果",
     "pinyin": "shuǐ guǒ",
-    "translations": [
-      "fruit",
-      "CL:個|个[gè]"
-    ]
+    "translations": ["fruit", "CL:個|个[gè]"]
   },
   {
     "id": 101,
     "hanzi": "睡觉",
     "pinyin": "shuì jiào",
-    "translations": [
-      "to go to bed",
-      "to sleep"
-    ]
+    "translations": ["to go to bed", "to sleep"]
   },
   {
     "id": 102,
@@ -1181,10 +950,7 @@
     "id": 103,
     "hanzi": "四",
     "pinyin": "sì",
-    "translations": [
-      "four",
-      "4"
-    ]
+    "translations": ["four", "4"]
   },
   {
     "id": 104,
@@ -1213,29 +979,19 @@
     "id": 106,
     "hanzi": "她",
     "pinyin": "tā",
-    "translations": [
-      "she"
-    ]
+    "translations": ["she"]
   },
   {
     "id": 107,
     "hanzi": "太",
     "pinyin": "tài",
-    "translations": [
-      "highest",
-      "greatest",
-      "too (much)",
-      "very",
-      "extremely"
-    ]
+    "translations": ["highest", "greatest", "too (much)", "very", "extremely"]
   },
   {
     "id": 108,
     "hanzi": "天气",
     "pinyin": "tiān qì",
-    "translations": [
-      "weather"
-    ]
+    "translations": ["weather"]
   },
   {
     "id": 109,
@@ -1265,48 +1021,31 @@
     "id": 111,
     "hanzi": "喂",
     "pinyin": "wèi",
-    "translations": [
-      "to feed"
-    ]
+    "translations": ["to feed"]
   },
   {
     "id": 112,
     "hanzi": "我",
     "pinyin": "wǒ",
-    "translations": [
-      "I",
-      "me",
-      "my"
-    ]
+    "translations": ["I", "me", "my"]
   },
   {
     "id": 113,
     "hanzi": "我们",
     "pinyin": "wǒ men",
-    "translations": [
-      "we",
-      "us",
-      "ourselves",
-      "our"
-    ]
+    "translations": ["we", "us", "ourselves", "our"]
   },
   {
     "id": 114,
     "hanzi": "五",
     "pinyin": "wǔ",
-    "translations": [
-      "five",
-      "5"
-    ]
+    "translations": ["five", "5"]
   },
   {
     "id": 115,
     "hanzi": "喜欢",
     "pinyin": "xǐ huan",
-    "translations": [
-      "to like",
-      "to be fond of"
-    ]
+    "translations": ["to like", "to be fond of"]
   },
   {
     "id": 116,
@@ -1328,31 +1067,19 @@
     "id": 117,
     "hanzi": "下午",
     "pinyin": "xià wǔ",
-    "translations": [
-      "afternoon",
-      "CL:個|个[gè]",
-      "p.m."
-    ]
+    "translations": ["afternoon", "CL:個|个[gè]", "p.m."]
   },
   {
     "id": 118,
     "hanzi": "下雨",
     "pinyin": "xià yǔ",
-    "translations": [
-      "to rain",
-      "rainy"
-    ]
+    "translations": ["to rain", "rainy"]
   },
   {
     "id": 119,
     "hanzi": "先生",
     "pinyin": "xiān sheng",
-    "translations": [
-      "teacher",
-      "husband",
-      "doctor (topolect)",
-      "CL:位[wèi]"
-    ]
+    "translations": ["teacher", "husband", "doctor (topolect)", "CL:位[wèi]"]
   },
   {
     "id": 120,
@@ -1384,12 +1111,7 @@
     "id": 122,
     "hanzi": "小",
     "pinyin": "xiǎo",
-    "translations": [
-      "small",
-      "tiny",
-      "few",
-      "young"
-    ]
+    "translations": ["small", "tiny", "few", "young"]
   },
   {
     "id": 123,
@@ -1418,56 +1140,37 @@
     "id": 125,
     "hanzi": "写",
     "pinyin": "xiě",
-    "translations": [
-      "to write"
-    ]
+    "translations": ["to write"]
   },
   {
     "id": 126,
     "hanzi": "谢谢",
     "pinyin": "xiè xie",
-    "translations": [
-      "to thank",
-      "thanks"
-    ]
+    "translations": ["to thank", "thanks"]
   },
   {
     "id": 127,
     "hanzi": "星期",
     "pinyin": "xīng qī",
-    "translations": [
-      "week",
-      "CL:個|个[gè]",
-      "day of the week",
-      "Sunday"
-    ]
+    "translations": ["week", "CL:個|个[gè]", "day of the week", "Sunday"]
   },
   {
     "id": 128,
     "hanzi": "学生",
     "pinyin": "xué sheng",
-    "translations": [
-      "student",
-      "schoolchild"
-    ]
+    "translations": ["student", "schoolchild"]
   },
   {
     "id": 129,
     "hanzi": "学习",
     "pinyin": "xué xí",
-    "translations": [
-      "to learn",
-      "to study"
-    ]
+    "translations": ["to learn", "to study"]
   },
   {
     "id": 130,
     "hanzi": "学校",
     "pinyin": "xué xiào",
-    "translations": [
-      "school",
-      "CL:所[suǒ]"
-    ]
+    "translations": ["school", "CL:所[suǒ]"]
   },
   {
     "id": 131,
@@ -1490,66 +1193,37 @@
     "id": 132,
     "hanzi": "衣服",
     "pinyin": "yī fu",
-    "translations": [
-      "clothes",
-      "CL:件",
-      "套[tào]"
-    ]
+    "translations": ["clothes", "CL:件", "套[tào]"]
   },
   {
     "id": 133,
     "hanzi": "医生",
     "pinyin": "yī shēng",
-    "translations": [
-      "doctor",
-      "CL:個|个",
-      "位",
-      "名[míng]"
-    ]
+    "translations": ["doctor", "CL:個|个", "位", "名[míng]"]
   },
   {
     "id": 134,
     "hanzi": "医院",
     "pinyin": "yī yuàn",
-    "translations": [
-      "hospital",
-      "CL:所",
-      "家",
-      "座[zuò]"
-    ]
+    "translations": ["hospital", "CL:所", "家", "座[zuò]"]
   },
   {
     "id": 135,
     "hanzi": "椅子",
     "pinyin": "yǐ zi",
-    "translations": [
-      "chair",
-      "CL:把",
-      "套[tào]"
-    ]
+    "translations": ["chair", "CL:把", "套[tào]"]
   },
   {
     "id": 136,
     "hanzi": "有",
     "pinyin": "yǒu",
-    "translations": [
-      "to have",
-      "there is",
-      "there are",
-      "to exist",
-      "to be"
-    ]
+    "translations": ["to have", "there is", "there are", "to exist", "to be"]
   },
   {
     "id": 137,
     "hanzi": "月",
     "pinyin": "yuè",
-    "translations": [
-      "moon",
-      "month",
-      "CL:個|个",
-      "輪|轮[lún]"
-    ]
+    "translations": ["moon", "month", "CL:個|个", "輪|轮[lún]"]
   },
   {
     "id": 138,
@@ -1567,29 +1241,19 @@
     "id": 139,
     "hanzi": "再见",
     "pinyin": "zài jiàn",
-    "translations": [
-      "goodbye",
-      "see you again later"
-    ]
+    "translations": ["goodbye", "see you again later"]
   },
   {
     "id": 140,
     "hanzi": "怎么",
     "pinyin": "zěn me",
-    "translations": [
-      "variant of 怎麼|怎么[zěn me]"
-    ]
+    "translations": ["variant of 怎麼|怎么[zěn me]"]
   },
   {
     "id": 141,
     "hanzi": "怎么样",
     "pinyin": "zěn me yàng",
-    "translations": [
-      "how?",
-      "how about?",
-      "how was it?",
-      "how are things?"
-    ]
+    "translations": ["how?", "how about?", "how was it?", "how are things?"]
   },
   {
     "id": 142,
@@ -1606,20 +1270,13 @@
     "id": 143,
     "hanzi": "中国",
     "pinyin": "Zhōng guó",
-    "translations": [
-      "China",
-      "Middle Kingdom"
-    ]
+    "translations": ["China", "Middle Kingdom"]
   },
   {
     "id": 144,
     "hanzi": "中午",
     "pinyin": "zhōng wǔ",
-    "translations": [
-      "noon",
-      "midday",
-      "CL:個|个[gè]"
-    ]
+    "translations": ["noon", "midday", "CL:個|个[gè]"]
   },
   {
     "id": 145,
@@ -1640,12 +1297,7 @@
     "id": 146,
     "hanzi": "桌子",
     "pinyin": "zhuō zi",
-    "translations": [
-      "table",
-      "desk",
-      "CL:張|张",
-      "套[tào]"
-    ]
+    "translations": ["table", "desk", "CL:張|张", "套[tào]"]
   },
   {
     "id": 147,
@@ -1664,9 +1316,7 @@
     "id": 148,
     "hanzi": "昨天",
     "pinyin": "zuó tiān",
-    "translations": [
-      "yesterday"
-    ]
+    "translations": ["yesterday"]
   },
   {
     "id": 149,

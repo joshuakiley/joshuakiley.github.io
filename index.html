@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <!-- How To Button -->
+
     <!-- Modal Initiate study, ask how many cards -->
     <div id="initiation-modal" class="modal">
       <div class="modal-content">
@@ -47,13 +47,37 @@
       </div>
     </div>
 
+    <div id="hsk-level" class="modal">
+        <div class="modal-content">
+          <h4>
+            Which HSK level would you like to study?
+          </h4>
+          <form id="initiattion-form" autocomplete="off">
+            <input
+              type="number"
+              id="lvl"
+              class="english title-query"
+              placeholder="1-6"
+            />
+            <button
+              class="btn right waves-effect waves-light english"
+              type="submit"
+              name="action"
+            >
+              Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+
     <!-- Modal choose shown language -->
     <div id="language-modal" class="modal">
       <div class="modal-content">
         <form id="initiation-form" autocomplete="off">
-          <p class="english modal-text">
+          <h4 class="english modal-text">
             Which language would you like to see on the front of the card?
-          </p>
+          </h4>
           <input
             type="text"
             id="language"
@@ -61,6 +85,14 @@
             value="Chinese"
             placeholder="Chinese/English"
           />
+          <button
+            class="btn right waves-effect waves-light english"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
         </form>
       </div>
     </div>
@@ -71,15 +103,20 @@
         <span class="close material-icons right">close</span>
         <form>
           <p class="modal-text">
-            Look at the word, make a guess and try to say it.<br /><br />When
-            you think you know it, click on the "show answer" button to see the
-            answer and hear the pronunciation<br /><br />If you had trouble with
-            it, click the "AGAIN" button to add it to the deck of cards that
-            you'll study again.<br /><br />If you think you got it, then click
-            the "RETIRE" button to retire the card for the session.<br /><br />When
-            all of the cards are gone, click the "STUDY AGAIN" button to study
-            the cards you had trouble with.<br /><br />Continue this process
-            untilall of the cards have been retired for this session.
+            <h4>HSK Flashcard Game</h4>
+            <h6>Initialization</h6>
+            <ul>
+              <li>Choose how many cards you want to study in this session</li>
+              <li>Choose which HSK level you would like to study</li>
+              <li>Choose the language for the front of the card</li>
+            </ul>
+            <h6>Card Game</h6>
+            <ul>
+                <li>Read the word and guess the meaning</li>
+                <li>Show the answer: check the meaning, see the pinyin, and listen to the pronunciation</li>
+                <li>If you were correct, then retire the card until next time</li>
+                <li>If you weren't sure, then return the card to the deck to practice again in this session</li>
+            </ul>
           </p>
         </form>
       </div>
@@ -95,17 +132,19 @@
         >
         <h1 class="card-title grey-text text-darken-4" id="frontTitle"></h1>
         <span
+        id="showAnsr"
           class="btn-large waves-effect activator waves-block waves-light english show"
         >
           show answer
         </span>
       </div>
       <div class="card-reveal">
-        <div class="btn-large waves-effect waves-light waves-block">
+        <div class="btn-large waves-effect waves-light waves-block" id="retire">
           retire card
         </div>
         <h1 class="card-title grey-text text-darken-4" id="backTitle"></h1>
         <span
+        id="audioBtn"
           class="btn-large waves-effect waves-block waves-light"
           onclick="document.getElementById('audio').play()"
           ><i class="material-icons">play_arrow</i></span

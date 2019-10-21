@@ -22,6 +22,9 @@ $(() => {
   // card back will be either Chinese or English base don user input
   let cardBack = "";
 
+  // HSK level value
+  let hskLevel = 0;
+
   /*************************************************************/
   // FUNCTION
   // Create Study List
@@ -92,14 +95,23 @@ $(() => {
     if ($("#quantity").val() > 0) {
       // set the number of cards to study this session based on user input
       studyCardQuantity = $("#quantity").val();
+      // switch from the card count modal to the language selection modal
+      $("#initiation-modal").css("display", "none");
+      $("#hsk-level").css("display", "block");
+    }
+  });
+
+  $("#hsk-level").on("submit", e => {
+    e.preventDefault();
+    if ($("#lvl").val() > 0 && $("#lvl").val() <= 6) {
+      hskLevel = $("#lvl").val();
       // access local json file with HSK vocab lists based on level user chooses to study from
       $.ajax({
         type: "GET",
-        url: "/json/hsk-level-1.json",
+        url: `/json/hsk-level-${hskLevel}.json`,
         data: "data"
       }).then(getStudyList);
-      // switch from the card count modal to the language selection modal
-      $("#initiation-modal").css("display", "none");
+      $("#hsk-level").css("display", "none");
       $("#language-modal").css("display", "block");
     }
   });
@@ -142,15 +154,34 @@ $(() => {
   });
 
   //EVENT
-  // when user clicks "show answer" button, show card back and play pronunciation audio
-  $("#pronunciation").on("click", e => {
-    console.log($("#audio").attr("src"));
-    $("#pronunciation").text(currentStudyArray[0]["pinyin"]);
-    $(".answer-text").css("display", "block");
+  // shuffle a card back into the deck to restudy again in this session and go to the next card
+  $("#shuffle").on("click", e => {
+    const card = currentStudyArray.shift();
+    currentStudyArray.push(card);
+    $("#backTitle").trigger("click");
+    // give the card enough time to hide so the answer doesn't show
+    setTimeout(cardSwitch, 150);
   });
 
-  $("#again").on("click", e => {
-    cardSwitch();
+  //EVENT
+  // remove the card from the deck after the user decides they know it
+  $("#retire").on("click", e => {
+    if (currentStudyArray.length > 1) {
+      currentStudyArray.shift();
+      $("#backTitle").trigger("click");
+      setTimeout(cardSwitch, 150);
+    } else if (currentStudyArray.length === 1) {
+      currentStudyArray.shift();
+      $("#frontTitle").text("COMPLETE");
+      $("#backTitle").text("加油！");
+      $("#pinyin").text("没了，做完成了！");
+      $("#back").text("去休息吧。。。");
+      $("#audioBtn").remove();
+      $("#shuffle").remove();
+      $("#retire").remove();
+      $("#showAnsr").remove();
+      $("#howBtn").remove();
+    }
   });
 
   //EVENT

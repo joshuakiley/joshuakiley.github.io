@@ -8,6 +8,11 @@ p {
   text-align: left;
 }
 
+li {
+  list-style-type: disc !important;
+  line-height: 30px;
+}
+
 #frontTitle {
   padding-bottom: 30px;
 }
@@ -21,10 +26,6 @@ p {
   height: 100%;
   z-index: 3;
   margin-top: 0px;
-}
-
-.card-title {
-  font-size: 64px !important;
 }
 
 .chinese {
