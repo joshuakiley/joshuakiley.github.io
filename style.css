@@ -33,7 +33,8 @@ footer > p {
 #howBtn {
   display: none;
   position: absolute;
-  bottom: 25px;
+  bottom: 1%;
+  left: 1%;
 }
 
 #close {
