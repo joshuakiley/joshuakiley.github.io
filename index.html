@@ -25,18 +25,18 @@
     <!-- Modal Initiate study, ask how many cards -->
     <div id="initiation-modal" class="modal">
       <div class="modal-content">
-        <h4>
-          How many cards would you like to study today?
-        </h4>
         <form id="initiattion-form" autocomplete="off">
+            <h4>
+                How many cards would you like to study today?
+              </h4>
           <input
             type="number"
             id="quantity"
-            class="english title-query"
-            value="10"
+            class="input-field english title-query"
+            placeholder="10"
           />
           <button
-            class="btn right waves-effect waves-light english"
+            class="btn blue lighten-1 right waves-effect waves-light english"
             type="submit"
             name="action"
           >
@@ -60,7 +60,7 @@
               placeholder="1-6"
             />
             <button
-              class="btn right waves-effect waves-light english"
+              class="btn blue lighten-1 right waves-effect waves-light english"
               type="submit"
               name="action"
             >
@@ -85,7 +85,7 @@
             placeholder="Chinese/English"
           />
           <button
-            class="btn right waves-effect waves-light english"
+            class="btn blue lighten-1 right waves-effect waves-light english"
             type="submit"
             name="action"
           >
@@ -99,17 +99,17 @@
     <!-- Modal Initiate study, ask how many cards -->
     <div id="howModal" class="modal">
       <div class="modal-content">
-        <span class="close material-icons right">close</span>
+        <span id="close" class="close material-icons right">close</span>
         <form>
           <p class="modal-text">
             <h4>HSK Flashcard Game</h4>
-            <h6>Initialization</h6>
+            <h5>Initialization</h5>
             <ul>
               <li>Choose how many cards you want to study in this session</li>
               <li>Choose which HSK level you would like to study</li>
               <li>Choose the language for the front of the card</li>
             </ul>
-            <h6>Card Game</h6>
+            <h5>Card Game</h5>
             <ul>
                 <li>Read the word and guess the meaning</li>
                 <li>Show the answer: check the meaning, see the pinyin, and listen to the pronunciation</li>
@@ -118,7 +118,8 @@
             </ul>
           </p>
           <button
-          class="btn right waves-effect waves-light english"
+          id="begin"
+          class="btn blue lighten-1 right waves-effect waves-light english"
           type="submit"
           name="action"
         >
@@ -131,28 +132,22 @@
 
     <div class="card large">
       <div class="card-content">
-        <a
-          class="waves-effect waves-light english btn modal-trigger"
-          id="howBtn"
-          href="#howModal"
-          >How To</a
-        >
         <h1 class="card-title grey-text text-darken-4" id="frontTitle"></h1>
         <span
         id="showAnsr"
-          class="btn-large waves-effect activator waves-block waves-light english show"
+          class="btn-large blue lighten-1 waves-effect activator waves-block waves-light english show"
         >
           show answer
         </span>
       </div>
       <div class="card-reveal">
-        <div class="btn-large waves-effect waves-light waves-block" id="retire">
+        <div class="btn-large blue lighten-1 waves-effect waves-light waves-block" id="retire">
           retire card
         </div>
         <h1 class="card-title grey-text text-darken-4" id="backTitle"></h1>
         <span
         id="audioBtn"
-          class="btn-large waves-effect waves-block waves-light"
+          class="btn-large blue lighten-1 waves-effect waves-block waves-light"
           onclick="document.getElementById('audio').play()"
           ><i class="material-icons">play_arrow</i></span
         >
@@ -164,7 +159,7 @@
           eos. Molestiae!
         </p>
         <div
-          class="btn-large btn-block waves-light waves-block waves-effect"
+          class="btn-large blue lighten-1 btn-block waves-light waves-block waves-effect"
           id="shuffle"
         >
           return to deck
@@ -174,6 +169,12 @@
 
     <footer>
       <p>Built by <a href="https://github.com/joshuakiley">Joshua Kiley</a><br>Powered by <a href="https://forvo.com/">Forvo.com</a> and <a href="https://github.com/gigacool/hanyu-shuiping-kaoshi">gigacool</a></p>
+      <a
+          class="waves-effect blue lighten-1 waves-light english btn modal-trigger"
+          id="howBtn"
+          href="#howModal"
+          >How To</a
+        >
     </footer>
 
 

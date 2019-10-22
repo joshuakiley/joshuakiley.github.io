@@ -7,11 +7,8 @@ $(() => {
   // array of cards to be studied this session based on the number of cards the user wants to study
   const currentStudyArray = [];
 
-  // array of cards to study again
-  const studyAgain = [];
-
   //array of cards retired for this session
-  const retired = [];
+  const retire = [];
 
   // user input number of cards want to study this session
   let studyCardQuantity = 0;
@@ -26,29 +23,71 @@ $(() => {
   let hskLevel = 0;
 
   /*************************************************************/
+  //FUNCTION
+  // put retired vocabulary into the retired array so that when the new local sotrage data is set retired cards from previous sessions remain retired
+  const getPreviouslyRetiredCards = () => {
+    if (JSON.parse(localStorage.getItem(`hsk${hskLevel}`)) !== null) {
+      const previousList = JSON.parse(localStorage.getItem(`hsk${hskLevel}`));
+      for (let i = 0; i < previousList.length; i++) {
+        retire.push(previousList[i]);
+      }
+    }
+    console.log(retire);
+  };
+
+  //FUCNTION
+  // compare full array of vocabulary with vocabulary stored in local storage (vocab already studied), so that the vocab list is always new vocabulary and doesn't include retired vocabulary
+  const compare = otherArr => {
+    return currentArr => {
+      return (
+        otherArr.filter(other => {
+          return other.hanzi == currentArr.hanzi;
+        }).length == 0
+      );
+    };
+  };
+
   // FUNCTION
   // Create Study List
   const getStudyList = data => {
+    let newCardArray = [];
     // make an array of every vocabulary word in the selected HSK level
     for (let i = 0; i < data.length; i++) {
       fullArray.push(data[i]);
     }
 
+    if (localStorage.getItem(`hsk${hskLevel}`) !== null) {
+      const oldList = JSON.parse(localStorage.getItem(`hsk${hskLevel}`));
+      newCardArray = fullArray
+        .filter(compare(oldList))
+        .concat(oldList.filter(compare(fullArray)));
+    } else {
+      newCardArray = fullArray;
+    }
+
     // make sure studyCardQuantity not greater than the number of available vocabulary words
-    if (studyCardQuantity > fullArray.length) {
-      studyCardQuantity = fullArray.length;
+    if (JSON.parse(localStorage.getItem(`hsk${hskLevel}`)) !== null) {
+      if (
+        studyCardQuantity >
+        newCardArray.length -
+          JSON.parse(localStorage.getItem(`hsk${hskLevel}`)).length
+      ) {
+        studyCardQuantity =
+          newCardArray.length -
+          JSON.parse(localStorage.getItem(`hsk${hskLevel}`)).length;
+      }
     }
 
     // create an array of cards to study for current session based on user input
     for (let i = 0; i < studyCardQuantity; i++) {
       // random number used to access random index in the array of all the vocab for selected HSK level
-      const randomCard = Math.round(Math.random() * (fullArray.length - 1));
+      const randomCard = Math.round(Math.random() * (newCardArray.length - 1));
       // checks for redundancy in this sessions card deck
-      if (currentStudyArray.includes(fullArray[randomCard])) {
+      if (currentStudyArray.includes(newCardArray[randomCard])) {
         i--;
       } else {
         // places non-redundant cards in this session's study deck
-        currentStudyArray.push(fullArray[randomCard]);
+        currentStudyArray.push(newCardArray[randomCard]);
       }
     }
   };
@@ -96,8 +135,11 @@ $(() => {
   // show the directions to the user before getting input from the user
   $("#howModal").on("submit", e => {
     e.preventDefault();
+    $("#begin").remove();
     $("#howModal").css("display", "none");
+    $("#close").css("display", "block");
     $("#initiation-modal").css("display", "block");
+    $("#quantity").trigger("select");
   });
 
   //EVENT
@@ -112,6 +154,9 @@ $(() => {
       // switch from the card count modal to the language selection modal
       $("#initiation-modal").css("display", "none");
       $("#hsk-level").css("display", "block");
+      $("#lvl").trigger("select");
+    } else {
+      $("#quantity").trigger("select");
     }
   });
 
@@ -119,6 +164,7 @@ $(() => {
     e.preventDefault();
     if ($("#lvl").val() > 0 && $("#lvl").val() <= 6) {
       hskLevel = $("#lvl").val();
+      getPreviouslyRetiredCards();
       // access local json file with HSK vocab lists based on level user chooses to study from
       $.ajax({
         type: "GET",
@@ -127,6 +173,9 @@ $(() => {
       }).then(getStudyList);
       $("#hsk-level").css("display", "none");
       $("#language-modal").css("display", "block");
+      $("#language").trigger("select");
+    } else {
+      $("#lvl").trigger("select");
     }
   });
 
@@ -162,8 +211,11 @@ $(() => {
       }
       // hide the language selection modal
       $("#language-modal").css("display", "none");
+      $("#howBtn").css("display", "block");
       // set the pronunciation audio for the first card from Forvo's API
       cardSwitch();
+    } else {
+      $("#language").trigger("select");
     }
   });
 
@@ -181,11 +233,11 @@ $(() => {
   // remove the card from the deck after the user decides they know it
   $("#retire").on("click", e => {
     if (currentStudyArray.length > 1) {
-      currentStudyArray.shift();
       $("#backTitle").trigger("click");
+      retire.push(currentStudyArray.shift());
       setTimeout(cardSwitch, 150);
     } else if (currentStudyArray.length === 1) {
-      currentStudyArray.shift();
+      retire.push(currentStudyArray.shift());
       $("#frontTitle").text("COMPLETE");
       $("#backTitle").text("加油！");
       $("#pinyin").text("没了，做完成了！");
@@ -195,6 +247,7 @@ $(() => {
       $("#retire").remove();
       $("#showAnsr").remove();
       $("#howBtn").remove();
+      localStorage.setItem(`hsk${hskLevel}`, JSON.stringify(retire));
     }
   });
 
