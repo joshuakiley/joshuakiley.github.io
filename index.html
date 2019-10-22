@@ -52,7 +52,7 @@
           <h4>
             Which HSK level would you like to study?
           </h4>
-          <form id="initiattion-form" autocomplete="off">
+          <form id="lvlform" autocomplete="off">
             <input
               type="number"
               id="lvl"
@@ -74,7 +74,7 @@
     <!-- Modal choose shown language -->
     <div id="language-modal" class="modal">
       <div class="modal-content">
-        <form id="initiation-form" autocomplete="off">
+        <form id="language-form" autocomplete="off">
           <h4 class="english modal-text">
             Which language would you like to see on the front of the card?
           </h4>
@@ -113,7 +113,7 @@
             <ul>
                 <li>Read the word and guess the meaning</li>
                 <li>Show the answer: check the meaning, see the pinyin, and listen to the pronunciation</li>
-                <li>If you were correct, then retire the card until next time</li>
+                <li>If you were correct, then retire the card <strong>it won't show up in following sessions</strong></li>
                 <li>If you weren't sure, then return the card to the deck to practice again in this session</li>
             </ul>
           </p>
@@ -139,6 +139,9 @@
         >
           show answer
         </span>
+        <div id="refresh" class="btn-large blue lighten-1 btn-block waves-light waves-block waves-effect">play again with new words</div>
+        <div
+        <div id="reset" class="btn-large blue lighten-1 btn-block waves-light waves-block waves-effect">return retired words to deck</div>
       </div>
       <div class="card-reveal">
         <div class="btn-large blue lighten-1 waves-effect waves-light waves-block" id="retire">
@@ -168,13 +171,13 @@
     </div>
 
     <footer>
+        <a
+        class="waves-effect blue lighten-1 waves-light english btn modal-trigger"
+        id="howBtn"
+        href="#howModal"
+        >How To</a
+      >
       <p>Built by <a href="https://github.com/joshuakiley">Joshua Kiley</a><br>Powered by <a href="https://forvo.com/">Forvo.com</a> and <a href="https://github.com/gigacool/hanyu-shuiping-kaoshi">gigacool</a></p>
-      <a
-          class="waves-effect blue lighten-1 waves-light english btn modal-trigger"
-          id="howBtn"
-          href="#howModal"
-          >How To</a
-        >
     </footer>
 
 

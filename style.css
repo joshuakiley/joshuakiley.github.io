@@ -26,19 +26,39 @@ footer > p {
   padding-bottom: 30px;
 }
 
+#reset {
+  display: none;
+}
+
+#refresh {
+  margin: 20px 0;
+  display: none;
+}
+
+#review {
+  display: none;
+}
+
 #howModal {
   display: block;
 }
 
 #howBtn {
   display: none;
-  position: absolute;
-  bottom: 1%;
-  left: 1%;
+  margin-top: 5px;
+}
+
+#study {
+  text-align: center;
 }
 
 #close {
   display: none;
+}
+
+.study {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .modal {

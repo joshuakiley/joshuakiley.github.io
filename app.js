@@ -22,6 +22,9 @@ $(() => {
   // HSK level value
   let hskLevel = 0;
 
+  //check review or study new cards
+  let study = "";
+
   /*************************************************************/
   //FUNCTION
   // put retired vocabulary into the retired array so that when the new local sotrage data is set retired cards from previous sessions remain retired
@@ -32,7 +35,6 @@ $(() => {
         retire.push(previousList[i]);
       }
     }
-    console.log(retire);
   };
 
   //FUCNTION
@@ -238,15 +240,19 @@ $(() => {
       setTimeout(cardSwitch, 150);
     } else if (currentStudyArray.length === 1) {
       retire.push(currentStudyArray.shift());
-      $("#frontTitle").text("COMPLETE");
+      $("#frontTitle").text(
+        "Play again with new words, or return retired cards to the deck for a chance to study them next time."
+      );
+      $("#reset").css("display", "block");
+      $("#refresh").css("display", "block");
       $("#backTitle").text("加油！");
       $("#pinyin").text("没了，做完成了！");
       $("#back").text("去休息吧。。。");
       $("#audioBtn").remove();
       $("#shuffle").remove();
       $("#retire").remove();
-      $("#showAnsr").remove();
       $("#howBtn").remove();
+      $("#showAnsr").remove();
       localStorage.setItem(`hsk${hskLevel}`, JSON.stringify(retire));
     }
   });
@@ -259,6 +265,18 @@ $(() => {
 
   $("#howBtn").on("click", () => {
     $("#howModal").css("display", "block");
+  });
+
+  //EVENT
+  //reset retired cards list
+  $("#reset").on("click", () => {
+    localStorage.clear();
+  });
+
+  //EVENT
+  //play again
+  $("#refresh").on("click", () => {
+    location.reload();
   });
 
   // modal pops up giving directions
