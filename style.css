@@ -43,6 +43,7 @@ footer > p {
 }
 
 #howModal {
+  z-index: 10;
   display: block;
 }
 
@@ -57,6 +58,7 @@ footer > p {
 
 #close {
   display: none;
+  cursor: pointer;
 }
 
 .study {
