@@ -38,6 +38,9 @@ footer > p {
 #review {
   display: none;
 }
+.modal {
+  max-height: 100% !important;
+}
 
 #howModal {
   display: block;
@@ -79,7 +82,7 @@ footer > p {
 
 .card {
   text-align: center;
-  height: 89vh !important;
+  height: 80vh !important;
   max-width: 800px;
   margin: auto;
 }
