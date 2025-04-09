@@ -1,0 +1,75 @@
+/* Fira Sans Import */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+/* Fira Code Import */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+
+/* General page styling */
+body {
+    background-color: #1e1e1e;
+    color: #d0d0d0;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 10px;
+}
+
+#terminal {
+    background-color: #333333;
+    color: #f2f2f2;
+    font-family: 'Fira Mono', 'Fira Code', 'DejaVu Sans Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 10px 15px;
+    border: 1px solid #444;
+    min-height: 400px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+#terminal>div {
+    margin-bottom: 5px;
+}
+
+/* Blinking Block Cursor */
+#cursor {
+    display: inline-block;
+    background-color: #cccccc;
+    width: 0.6em;
+    height: 1.1em;
+    vertical-align: bottom;
+    margin-left: 1px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.prompt-user {
+    color: #4e9a06;
+    font-weight: bold;
+
+}
+
+.prompt-dir {
+    color: #8787d7;
+}
+
+.prompt-symbol {
+    color: #cccccc;
+}

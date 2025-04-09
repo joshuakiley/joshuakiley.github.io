@@ -1,0 +1,4 @@
+./welcome.sh
+Hello and thank you for taking an interest in me.
+What would you like to be called?
+Welcome, {name}! Here is some more information...
